@@ -1,9 +1,10 @@
-ername=$2
+cmd=$1
+db_username=$2
 db_password=$3
 
 #Start docker
 #Make sure you understand `||` cmd
-sudo systemctl status docker || systemctl
+sudo systemctl status docker || sudo systemctl start docker
 
 #check container status (try the following cmds on terminal)
 docker container inspect jrvs-psql
@@ -35,8 +36,10 @@ case $cmd in
 
   start|stop) 
   #check instance status; exit 1 if container has not been created
-  if [ $container_status #todo
-  #todo
+  if [ $container_status == "running" ]; then
+		echo 'Container has been created'
+		exit 1	
+	fi
 
   #Start or stop the container
 	docker container $cmd jrvs-psql
@@ -48,3 +51,4 @@ case $cmd in
 	echo 'Commands: start|stop|create'
 	exit 1
 	;;
+esac
