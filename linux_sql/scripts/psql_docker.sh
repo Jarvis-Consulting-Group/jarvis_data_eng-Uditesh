@@ -27,9 +27,12 @@ case $cmd in
   fi
   
   #Create container
-	docker volume #todo
+	docker volume create pgdata
+	#set password for default user `postgres`
+  export PGPASSWORD='password'
   #Start the container
-	docker run #todo
+  docker run --name jrvs-psql -e POSTGRES_PASSWORD=$PGPASSWORD -d -v pgdata:/var/lib/postgresql/data
+  -p 5432:5432 postgres:9.6-alpine
   #Make sure you understand what's `$?`
 	exit $?
 	;;
