@@ -1,5 +1,4 @@
 # Introduction
-<hr>
 This Linux app is the Minimum Viable Product(MVP) that 
 helps the Linux Cluster Administration(LCA) team to meet 
 their business needs. Here a PostgreSQL instance is set to persevere 
@@ -14,7 +13,6 @@ planning purposes. Technologies used to build this app are Linux commands,
 Bash scripts, PostgreSQL, Docker, and Git.
 
 # Quick Start
-<hr>
 
 - start docker if docker server is not running
 
@@ -70,7 +68,7 @@ crontab -l
 ```
 
 # Implementation
-<hr>
+
 The Linux app is implemented by the use of various bash scripts
 which query each server to record the hardware specification and 
 resource usage information to perform the data analytics. Docker 
@@ -121,6 +119,7 @@ future recourses.
 ```
 
 ## Database Modeling
+<hr>
 
 - `host_info`
 
@@ -172,7 +171,6 @@ bash> crontab -l
 ```
 
 # Deployment
-<hr>
 
 For the deployment of the Linux app, all the features were 
 pushed to the features branches of the git. Then they were merged
@@ -183,7 +181,6 @@ collect the resource usage information on every minute to understand
 the report on the resources.
 
 # Improvements
-<hr>
 
 - Handle all the hardware updates
 - Generate visual reports
