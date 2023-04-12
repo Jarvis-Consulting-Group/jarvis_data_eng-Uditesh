@@ -1,4 +1,5 @@
 # Introduction
+
 This Linux app is the Minimum Viable Product(MVP) that 
 helps the Linux Cluster Administration(LCA) team to meet 
 their business needs. Here a PostgreSQL instance is set to persevere 
@@ -76,10 +77,8 @@ container is used to set the PostgreSQL instance which will store
 the data into RDBMS every minute by using the crontab. 
 
 ## Architecture
-<hr>
 
 ## Scripts
-<hr>
 
 - psql_docker.sh
 
@@ -119,7 +118,6 @@ future recourses.
 ```
 
 ## Database Modeling
-<hr>
 
 - `host_info`
 
@@ -152,7 +150,6 @@ This table stores the information about resource usage data.
 | disk_available | Root directory avaiable disk in MB |
 
 # Test
-<hr>
 
 - Run ddl.sql to create the tables
 ```
