@@ -382,6 +382,6 @@ select
 from
   cd.members mems
 group by
-  letter 
+  letter
 order by
   letter;
